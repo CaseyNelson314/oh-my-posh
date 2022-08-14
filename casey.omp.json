@@ -15,7 +15,10 @@
           "background": "#546E7A",
           "foreground": "#c3f7fd",
           "properties": {
-            "style": "full"
+            "folder_icon": "\u2026",
+            "folder_separator_icon": " \ue0b1 ",
+            "style": "agnoster_short",
+            "max_depth": 3
           },
           "style": "plain",
           "template": " {{ .Path }} ",
@@ -40,13 +43,13 @@
           "background": "#546E7A",
           "foreground": "#D4E157",
           "leading_diamond": "\ue0b2",
-          "template": " {{ .UserName }} <#26C6DA>\ue0b3</> "
+          "template": " {{ .UserName }} "
         },
         {
           "background": "#546E7A",
           "foreground": "#D4E157",
           "style": "plain",
-          "template": "{{ .HEAD }} ",
+          "template": "<#c3f7fd>\ue0b3</> {{ .HEAD }} ",
           "type": "git"
         },
         {
