@@ -48,9 +48,6 @@ oh-my-posh 自作テーマ json
         
       https://www.nerdfonts.com
 
-  [セットアップ](https://docs.microsoft.com/ja-jp/windows/terminal/tutorials/custom-prompt-setup)
-
-
 ### customize
 
 - テーマの変更
@@ -63,10 +60,10 @@ oh-my-posh 自作テーマ json
 
 - 追加
 
-　追加するjsonファイルは `$PROFILE` 内の `$env:POSH_THEMES_PATH`ディレクトリ内に配置する
-  
-  <img width=800 src="https://user-images.githubusercontent.com/91818705/184508044-e6d044b8-adfc-4ccd-bc57-d10535cd2700.png">
-
+   追加するjsonファイルは `$env:POSH_THEMES_PATH` ディレクトリ内に配置する
+   ```sh
+   start $env:POSH_THEMES_PATH
+   ```
 
 - 基本的に oh-my-posh [公式ドキュメント](https://ohmyposh.dev/docs) の`🌟Segments`を見ることでカスタマイズが可能
 
