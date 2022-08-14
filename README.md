@@ -11,7 +11,47 @@ oh-my-posh 自作テーマ json
 
 ### oh-my-posh install
 
-[セットアップ](https://docs.microsoft.com/ja-jp/windows/terminal/tutorials/custom-prompt-setup)
+  - `winget`コマンドでインストール
+
+      ```sh
+      winget install oh-my-posh
+      ```
+    
+  - シェル起動時のプロファイル設定
+
+      ```sh
+      notepad $PROFILE
+      ```
+       
+    プロファイルがない場合
+    
+      ```sh
+      New-Item -ItemType File -Path $PROFILE -Force
+      notepad $PROFILE        
+      ```
+
+      以下を記述
+
+      ```sh
+      oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH\paradox.omp.json" | Invoke-Expression
+      ```
+      
+      プロファイルが読み込まれない場合
+
+      ```sh
+      Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+      ```
+        
+  - フォントのインストール
+    
+      oh-my-posh は 以下の専用のフォントを使って表示しています
+        
+      https://www.nerdfonts.com
+
+  [セットアップ](https://docs.microsoft.com/ja-jp/windows/terminal/tutorials/custom-prompt-setup)
+
+
+### customize
 
 - テーマの変更
 
@@ -20,8 +60,6 @@ oh-my-posh 自作テーマ json
 -  テーマ一覧
 
     https://ohmyposh.dev/docs/themes
-
-### json customize
 
 - 追加
 
