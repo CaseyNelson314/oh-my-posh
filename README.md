@@ -47,6 +47,10 @@ oh-my-posh 自作テーマ json
       oh-my-posh は 以下の専用のフォントを使って表示しています
         
       https://www.nerdfonts.com
+      
+  - フォント設定
+  
+      設定 > 既定値 > 外観 > フォントフェイス
 
 ### customize
 
