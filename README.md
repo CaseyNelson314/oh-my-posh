@@ -11,7 +11,7 @@ oh-my-posh 自作テーマ json
 
 ### oh-my-posh install
 
-  - `winget`コマンドでインストール
+  - oh-my-posh インストール
 
       ```sh
       winget install oh-my-posh
@@ -42,7 +42,7 @@ oh-my-posh 自作テーマ json
       Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
       ```
         
-  - フォントのインストール
+  - フォントインストール
     
       oh-my-posh は 以下の専用のフォントを使って表示しています
         
@@ -58,7 +58,7 @@ oh-my-posh 自作テーマ json
 
     `$PROFILE` 内の `paradox.omp.json`のファイル名を変更する
 
--  テーマ一覧
+- テーマ一覧
 
     https://ohmyposh.dev/docs/themes
 
