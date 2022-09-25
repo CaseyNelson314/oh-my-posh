@@ -1,40 +1,40 @@
 {
-  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
   "blocks": [
     {
+      "type": "prompt",
       "alignment": "left",
       "segments": [
         {
+          "type": "root",
+          "style": "plain",
           "background": "#546E7A",
           "foreground": "#c3f7fd",
-          "style": "plain",
-          "template": " \uf0e7 ",
-          "type": "root"
+          "template": " \uf0e7 "
         },
         {
+          "type": "path",
+          "style": "plain",
           "background": "#546E7A",
           "foreground": "#c3f7fd",
           "properties": {
+            "style": "agnoster_short",
             "folder_icon": "\u2026",
             "folder_separator_icon": " \ue0b1 ",
-            "style": "agnoster_short",
             "max_depth": 3
           },
-          "style": "plain",
-          "template": " {{ .Path }} ",
-          "type": "path"
+          "template": " {{ .Path }} "
         },
         {
+          "type": "text",
+          "style": "plain",
           "background": "transparent",
           "foreground": "#546E7A",
-          "style": "plain",
-          "template": "\ue0b0",
-          "type": "text"
+          "template": "\ue0b0"
         }
-      ],
-      "type": "prompt"
+      ]
     },
     {
+      "type": "prompt",
       "alignment": "right",
       "segments": [
         {
@@ -46,11 +46,15 @@
           "template": " {{ .UserName }} "
         },
         {
+          "type": "git",
+          "style": "plain",
           "background": "#546E7A",
           "foreground": "#D4E157",
-          "style": "plain",
-          "template": "<#c3f7fd>\ue0b3</> {{ .HEAD }} ",
-          "type": "git"
+          "properties": {
+            "fetch_status": true,
+            "fetch_stash_count": true
+          },
+          "template": "<#c3f7fd>\ue0b3</> {{ .HEAD }} +{{ .Working.Modified }} ~{{ .Staging.Modified }} "
         },
         {
           "type": "node",
@@ -59,14 +63,16 @@
           "background": "#546E7A",
           "template": "\ue718 "
         }
-      ],
-      "type": "prompt"
+      ]
     },
     {
+      "type": "prompt",
       "alignment": "left",
       "newline": true,
       "segments": [
         {
+          "type": "exit",
+          "style": "plain",
           "foreground": "#D4E157",
           "foreground_templates": [
             "{{ if gt .Code 0 }}#FF5252{{ end }}"
@@ -74,12 +80,9 @@
           "properties": {
             "always_enabled": true
           },
-          "style": "plain",
-          "template": "\u276f ",
-          "type": "exit"
+          "template": "\u276f "
         }
-      ],
-      "type": "prompt"
+      ]
     }
   ],
   "version": 2
